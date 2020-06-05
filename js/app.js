@@ -63,12 +63,12 @@ addPhrasetoDisplay(phraseArray);
 // Creating a checkLetter function
 
 function checkLetter (btnPressed) {
-    const li = document.querySelectorAll('.letter').textContent;
+    const li = document.querySelectorAll('.letter');
     console.log(li);
     let match = null;
     for (let i = 0; i < li.length; i++) {
-        const text = li[i].textContent;
-        if (btnPressed.toUpperCase() === text.toUpperCase()) {
+        const text = li.textContent;
+        if (btnPressed.toUpperCase() == text.toUpperCase()) {
             match = true;
             li.className = "show letter";
         }
