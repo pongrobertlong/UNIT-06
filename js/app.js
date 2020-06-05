@@ -67,8 +67,7 @@ function checkLetter (btnPressed) {
     console.log(li);
     let match = null;
     for (let i = 0; i < li.length; i++) {
-        const text = li.textContent.toUpperCase;
-        if (btnPressed.toUpperCase() == text) {
+        if (btnPressed.toUpperCase() == li[i].textContent.toUpperCase) {
             match = true;
             li.className = "show letter";
         }
