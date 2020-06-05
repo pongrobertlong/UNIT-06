@@ -63,18 +63,19 @@ addPhrasetoDisplay(phraseArray);
 // Creating a checkLetter function
 
 function checkLetter (btnPressed) {
-    const li = document.querySelectorAll('letter')
+    const li = document.querySelectorAll('.letter').textContent;
+    console.log(li);
     let match = null;
     for (let i = 0; i < li.length; i++) {
-        li[i];
-        if (btnPressed === li[i].textContent) {
+        const text = li[i].textContent;
+        if (btnPressed.toUpperCase() === text.toUpperCase()) {
             match = true;
-            li[i].className = "show letter";
+            li.className = "show letter";
         }
         
     
     }
-    return match;
+    
 }
 
 // Event Listener for Keyboard
@@ -86,6 +87,7 @@ qwerty.addEventListener('click', (e) => {
         btnPressed.className = "chosen";
         btnPressed.setAttribute('disabled', true);
         const letterFound = checkLetter(btnPressed.textContent)
+        console.log(letterFound)
     }
     
 });
