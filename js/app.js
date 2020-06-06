@@ -109,28 +109,28 @@ function checkWin (){
         overlay.className = "win"
         overlay.style.display = "flex";
         headlineText.textContent = "Congratulations! You Won!"
-        // overlay.appendChild(createBtn);
-        // createBtn.className = "btn__reset";
-        // createBtn.textContent = "Reset";
+        overlay.appendChild(createBtn);
+        createBtn.className = "btn__reset";
+        createBtn.textContent = "Reset";
         resetGame();
     }
     if(missed > 4) {
         overlay.className = "lose";
         overlay.style.display = "flex";
         headlineText.textContent = "Sorry! You Lose! Try Again!"
-        // overlay.appendChild(createBtn);
-        // createBtn.className = "btn__reset";
-        // createBtn.textContent = "Reset";
-        // resetGame();
+        overlay.appendChild(createBtn);
+        createBtn.className = "btn__reset";
+        createBtn.textContent = "Reset";
+        resetGame();
         }
 };
 
 // //Reset Game 
 
-// function resetGame () {
+function resetGame () {
  
-//     createBtn.addEventListener('click', ()=>{  
-     
+    createBtn.addEventListener('click', ()=>{  
+             location.reload();   
 // //         const qwertyBtn = document.querySelectorAll('.chosen');
 // //         const li = document.createElement('li');
 // //         const img = document.createElement('img');
@@ -170,9 +170,9 @@ function checkWin (){
 // //          }   
    
 
-//     });
+    });
     
 
-// };
+};
 
 
